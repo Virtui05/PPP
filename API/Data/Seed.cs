@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using API.DTOs;
 using API.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,12 @@ namespace API.Data
         {
             if (await context.Users.AnyAsync()) return;
 
+            //tag seed
+            var tagData = await System.IO.File.ReadAllTextAsync("Data/TagSeedData.json");
+            var tags = JsonSerializer.Deserialize<List<Tag>>(tagData);
+            context.Tags.AddRange(tags);
+
+            //user seed
             var userData = await System.IO.File.ReadAllTextAsync("Data/UserSeedData.json");
             var users = JsonSerializer.Deserialize<List<AppUser>>(userData);
             foreach (var user in users)

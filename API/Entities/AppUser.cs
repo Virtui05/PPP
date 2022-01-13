@@ -17,6 +17,8 @@ namespace API.Entities
         public DateTime Created { get; set; } = DateTime.Now;
         public DateTime LastActive { get; set; } = DateTime.Now;
         public string Interests { get; set; }
+        public Tag FavoriteTag { get; set; }
+        public int FavoriteTagId { get; set; }
         public ICollection<Photo> Photos { get; set; }
 
         // public int GetAge()

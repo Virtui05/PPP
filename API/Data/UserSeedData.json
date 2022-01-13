@@ -6,6 +6,7 @@
         "Created": "2019-08-07",
         "LastActive": "2020-06-14",
         "Interests": "Sit ad in do occaecat ea esse nulla anim ad laborum ad qui.",
+        "FavoriteTagId":1,
         "Photos": [
             {
                 "Url": "https://randomuser.me/api/portraits/women/48.jpg",
@@ -20,6 +21,7 @@
         "Created": "2020-02-10",
         "LastActive": "2020-06-12",
         "Interests": "Adipisicing id consectetur quis duis.",
+        "FavoriteTagId":2,
         "Photos": [
             {
                 "Url": "https://randomuser.me/api/portraits/women/40.jpg",
@@ -34,6 +36,7 @@
         "Created": "2019-06-23",
         "LastActive": "2020-05-18",
         "Interests": "Fugiat ullamco consectetur minim excepteur culpa.",
+        "FavoriteTagId":3,
         "Photos": [
             {
                 "Url": "https://randomuser.me/api/portraits/women/31.jpg",
@@ -48,6 +51,7 @@
         "Created": "2019-05-08",
         "LastActive": "2020-06-28",
         "Interests": "Proident ex exercitation est ullamco amet deserunt Lorem.",
+        "FavoriteTagId":1,
         "Photos": [
             {
                 "Url": "https://randomuser.me/api/portraits/men/7.jpg",
@@ -62,6 +66,7 @@
         "Created": "2020-03-25",
         "LastActive": "2020-05-11",
         "Interests": "Cupidatat aliqua velit amet Lorem tempor do.",
+        "FavoriteTagId":2,
         "Photos": [
             {
                 "Url": "https://randomuser.me/api/portraits/men/95.jpg",
@@ -76,6 +81,7 @@
         "Created": "2020-03-05",
         "LastActive": "2020-06-25",
         "Interests": "Excepteur labore occaecat et excepteur est aliqua duis nulla commodo pariatur.",
+        "FavoriteTagId":2,
         "Photos": [
             {
                 "Url": "https://randomuser.me/api/portraits/men/3.jpg",

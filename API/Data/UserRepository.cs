@@ -45,6 +45,7 @@ namespace API.Data
         {
             return await _context.Users
                 .Include(p => p.Photos)
+                .Include(t => t.FavoriteTag)
                 .SingleOrDefaultAsync(x => x.UserName == username);
         }
 
@@ -52,6 +53,7 @@ namespace API.Data
         {
             return await _context.Users
                 .Include(p => p.Photos)
+                .Include(t => t.FavoriteTag)
                 .ToListAsync();
         }
 

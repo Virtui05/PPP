@@ -3,14 +3,16 @@ using System;
 using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220113112554_TagTable")]
+    partial class TagTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,7 +30,10 @@ namespace API.Data.Migrations
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("FavoriteTagId")
+                    b.Property<int>("FaroviteTagId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("FavoriteTagId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Interests")
@@ -99,9 +104,7 @@ namespace API.Data.Migrations
                 {
                     b.HasOne("API.Entities.Tag", "FavoriteTag")
                         .WithMany("AppUsers")
-                        .HasForeignKey("FavoriteTagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("FavoriteTagId");
 
                     b.Navigation("FavoriteTag");
                 });
